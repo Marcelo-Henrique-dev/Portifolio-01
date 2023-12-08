@@ -40,6 +40,16 @@ header .info-text h1{
 }
 header .info-text h3{
     font-size: 1.5rem;
+    text-align: center;
+}
+header .info-text h3 i:nth-of-type(1){
+    color: rgb(219, 120, 7);
+}
+header .info-text h3 i:nth-of-type(2){
+    color: #0047ab;
+}
+header .info-text h3 i:nth-of-type(3){
+    color: orange;
 }
 header .info-text .scroll{
     position: absolute;
@@ -93,7 +103,7 @@ header .info-text .scroll::before{
 }
 #sobre .header a, #features .header a{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.3em;
     color: white;
     border: 1px solid transparent;
     padding: 10px 50px;
@@ -104,4 +114,104 @@ header .info-text .scroll::before{
 #sobre .header a:hover, #features .header a:hover{
     border-color: white;
     box-shadow: none;
+}
+#sobre .card, #features .card{
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 20px;
+    display: flex;
+    gap: 30px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+#sobre .card:hover, #features .card:hover{
+    border-color: white;
+    box-shadow: none;
+}
+#sobre .card img{
+    border-radius: 50%;
+    max-width: 200px;
+    max-height: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+#sobre .card .info{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+#sobre .card .info h1, #features .card .info h1{
+    margin-bottom: 20px;
+    color: white;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-family: 'Ubuntu';
+}
+#sobre .card .info p, #features .card .info p{
+    color: #ccc;
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+}
+#features .feature-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+#features .feature-cards .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 350px;
+}
+#features .feature-cards .card .info i{
+    color: white;
+    font-size: 8rem;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+#featrues .feature-cards .card .info h1{
+    text-align: center;
+}
+#features .feature-cards .card .info p{
+    font-size: 1.1rem;
+}
+.scroll-top{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2b2f4b;
+    color: white;
+    border: 1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    padding: 16px 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+.scroll-top:hover{
+    border-color: white;
+    box-shadow: none;
+}
+
+@media (max-width: 768px){
+    header .info-text h1{
+        font-size: 4rem;
+    }
+    header .info-text h3{
+        font-size: 1.1rem;
+    }
+    #sobre .card{
+        flex-direction: column;
+        align-items: center;
+    }
+    #sobre .card img{
+        max-width: 150px;
+        max-height: 150px;
+    }
 }
